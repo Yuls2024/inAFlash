@@ -41,8 +41,8 @@
   }
   
   .nav-logo img {
-    width: 28px;
-    height: 28px;
+    width: 60px;
+    height: 60px;
   }
   
   .nav-links {
@@ -242,7 +242,8 @@
   .work-grid {
     display: flex;
     gap: 40px;
-    justify-content: center;
+    padding: 0 60px;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -250,11 +251,11 @@
   .work-box {
     /* background-color: #e6f8ff; */
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 0;
     /* max-width: 400px; */
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .work-box img {
@@ -304,24 +305,21 @@
   
   .faq-list summary {
     font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Removes default arrow */
+    position: relative;
+    padding-right: 25px; /* Space for caret */
   }
 
-  faq-list summary {
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none; /* Remove default arrow */
-  position: relative;
-  padding-right: 25px; /* Space for the caret */
-}
 
 /* Add custom caret on the right */
 .faq-list summary::after {
-  content: "▾"; /* Or use \"▼\" for filled arrow */
+  content: "⌄"; /* Or use \"▼\" for filled arrow */
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 1rem;
-  color: #ff6a3d;
+  font-size: 1.2rem;
+  color: #000;
   transition: transform 0.3s ease;
 }
 
@@ -366,6 +364,7 @@
   
   .contact-form textarea {
     min-height: 100px;
+    height: 290px;
     resize: vertical;
   }
   
@@ -385,9 +384,9 @@
   }
   
   .contact-image img {
-    /* max-width: 300px; */
     width: 541px;
     height: 550px;
+    margin-left: 40px;
   }
   
   /* === FOOTER === */
@@ -406,14 +405,31 @@
   }
   
   .footer-logo {
-    display: flex;
+    display: flex-column;
     align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ff6a3d;
     gap: 10px;
   }
   
   .footer-logo img {
-    width: 28px;
-    height: 28px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer-download {
+    display: flex-column;
+    gap: 10px;
+    
+  }
+
+  .store-buttons2 img {
+    width: 180px;
+    margin-right: 10px;
+    cursor: pointer;
+    /* border: 1px solid red; */
   }
   
   .footer h4 {
