@@ -227,12 +227,6 @@ header {
 }
 
 /* === HOW IT WORKS === */
-/* .how-it-works {
-    padding: 60px;
-    background-color: #fefefe;
-    text-align: left;
-    
-  } */
 
 .how-it-works h2 {
   color: #ff6a3d;
@@ -240,24 +234,13 @@ header {
   font-size: 2.2rem;
   font-weight: 700;
   text-align: left;
-  padding: 0 60px;
+  /* padding: 0 60px; */
 }
 
 .how-it-works {
-  padding: 80px 60px;
+  padding: 80px 120px 0px;
   background-color: #fefefe;
 }
-
-/* .how-it-works h2 {
-    font-size: 2.4rem;
-    color: #ff6a3d;
-    font-weight: 700;
-    margin-bottom: 60px;
-  } */
-
-/* .how-it-works h2 {
-    font-size: 2rem;
-  } */
 
 .work-grid {
   display: flex;
@@ -298,15 +281,24 @@ header {
 .work-text {
   display: flex;
   text-align: left;
-  /* width: 100%; */
+  width: 750px;
   max-width: 700px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   vertical-align: center;
-  margin: 100px 50px; 
+  margin: 100px 30px; 
 }
 
 .work-text p {
   padding: 5px 0;
+  font-size: 14px;
+}
+
+.arrow.invisible {
+  visibility: hidden;
+}
+
+.invisible {
+  visibility: hidden;
 }
 
 .arrow {
@@ -315,18 +307,18 @@ header {
   margin: 70px 20px;
   width: 26px;
   height: 26px;
-  /* border: 1px solid blue; */
+  border: 0px solid white;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .left-arrow {
-  transform: rotate(180deg);
-  
+  transform: scaleX(-1);
 }
 
 .arrow img {
   width: 26px;
   height: 26px;
-  
 }
 
 .work-dots {
@@ -424,6 +416,26 @@ header {
   gap: 15px;
 }
 
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.contact-names {
+  display: flex;
+  gap: 15px;
+} 
+
+.contact-email, .contact-subject, .contact-message {
+  display: flex;
+  flex-direction: column;
+}
+
+/* label {
+  padding: 0 12px;
+} */
+
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
@@ -431,11 +443,12 @@ header {
   border: 1px solid #ccc;
   font-family: inherit;
   font-size: 1rem;
+  border: none;
 }
 
 .contact-form textarea {
   min-height: 100px;
-  height: 290px;
+  height: 250px;
   resize: vertical;
 }
 
@@ -447,10 +460,8 @@ header {
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.contact-image {
-  /* margin-left: 40px; */
+  width: 25%;
+  height: 50px;
 }
 
 .contact-image img {

@@ -106,65 +106,84 @@
     </section>
 
     <!-- HOW IT WORKS -->
-  
+
     <section class="how-it-works" id="how-it-works">
       <h2>How It Works</h2>
-
-      <!-- For Senders -->
       <div class="work-box">
         <img src="images/senders.png" alt="Senders" />
+
         <div class="work-text">
-          <div class="arrow left-arrow">
-            <img src="images/forwardArrow.png" alt="Forward Arrow" />
-          </div>
-          <div>
+          <button
+            class="arrow left-arrow"
+            id="prevBtn"
+            aria-label="Previous step"
+          >
+            <img src="images/forwardArrow.png" alt="Left Arrow" />
+          </button>
+
+          <div class="step-content" id="stepContent">
             <h3><strong>For Senders</strong></h3>
             <p>
               <a href="#">Create an Account</a> › Set Your Price › Track Your
               Delivery
             </p>
-            <p class="work-description" id="">
+            <p class="work-description" id="stepDescription">
               Register on In-a-Flash to begin managing your deliveries
               effortlessly.
             </p>
             <div class="work-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+              <span class="dot active" data-step="0"></span>
+              <span class="dot" data-step="1"></span>
+              <span class="dot" data-step="2"></span>
             </div>
           </div>
-          <div class="arrow">
-            <img src="images/forwardArrow.png" alt="Forward Arrow" />
-          </div>
+
+          <!-- <button class="arrow" id="nextBtn">❯</button> -->
+          <button class="arrow" id="nextBtn" aria-label="Next step">
+            <img src="images/forwardArrow.png" alt="" />
+          </button>
         </div>
       </div>
 
       <!-- For Couriers -->
       <div class="work-box">
         <img src="images/couriers.png" alt="Couriers" />
+
         <div class="work-text">
-            <div class="arrow left-arrow">
-                <img src="images/forwardArrow.png" alt="Forward Arrow" />
+          <button
+            class="arrow left-arrow"
+            id="prevCourierBtn"
+            aria-label="Previous courier step"
+          >
+            <img src="images/forwardArrow.png" alt="Left Arrow" />
+          </button>
+
+          <div class="step-content" id="courierStepContent">
+            <h3><strong>For Couriers</strong></h3>
+            <p id="courierKeywords">
+              <a href="#">Sign Up as a Courier</a> › Choose Deliveries › Earn
+              Money
+            </p>
+            <p class="work-description" id="courierStepDescription">
+              Create your courier profile and set your preferences for delivery
+              modes, pricing, and availability.
+            </p>
+            <div class="work-dots">
+              <span class="dot active" data-step="0" data-type="courier"></span>
+              <span class="dot" data-step="1" data-type="courier"></span>
+              <span class="dot" data-step="2" data-type="courier"></span>
             </div>
-            <div>
-                <h3><strong>For Couriers</strong></h3>
-                <p>
-                  <a href="#">Sign Up as a Courier </a> › Choose Deliveries › Earn Money
-                </p>
-                <p class="work-description">
-                    Create your courier profile and set your preferences for delivery modes, pricing, and availability.
-                </p>
-                <div class="work-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-            </div>
-            <div class="arrow">
-                <img src="images/forwardArrow.png" alt="Forward Arrow" />
-            </div>
+          </div>
+
+          <button
+            class="arrow"
+            id="nextCourierBtn"
+            aria-label="Next courier step"
+          >
+            <img src="images/forwardArrow.png" alt="Right Arrow" />
+          </button>
         </div>
-    </div>
+      </div>
     </section>
 
     <!-- FAQ -->
@@ -214,12 +233,30 @@
     <!-- CONTACT FORM -->
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="First Name" required />
-        <input type="text" placeholder="Last Name" required />
-        <input type="email" placeholder="you@company.com" required />
-        <input type="text" placeholder="Subject" required />
-        <textarea placeholder="Enter your message" required></textarea>
+      <form class="contact-form" id="contact-form">
+        <div class="contact-names">
+          <div class="name">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+          </div>
+          <div class="name">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+          </div>
+        </div>
+        <div class="contact-email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="contact-subject">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required />
+        </div>
+        <div class="contact-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+
         <button type="submit">Send</button>
       </form>
       <div class="contact-image">
@@ -274,5 +311,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("NA5ZQQIm62IBqUBoj");
+      })();
+    </script>
   </body>
 </html>
