@@ -375,6 +375,10 @@ header {
   padding-right: 25px; /* Space for caret */
 }
 
+.answer {
+  padding-top: 10px;
+}
+
 /* Add custom caret on the right */
 .faq-list summary::after {
   content: "⌄"; /* Or use \"▼\" for filled arrow */
@@ -495,6 +499,11 @@ header {
   gap: 10px;
 }
 
+.footer-logo a {
+  text-decoration: none;
+  color: #ff6a3d;
+}
+
 .footer-logo img {
   width: 100px;
   height: 100px;
@@ -514,8 +523,8 @@ header {
 
 .footer h4 {
   margin-bottom: 10px;
-  font-size: 1rem;
-  color: #ff6a3d;
+  font-size: 1.1rem;
+  color: #fff;
 }
 
 .footer ul {
@@ -524,6 +533,38 @@ header {
 
 .footer ul li {
   margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.socialMediaIcons {
+  /* display: flex; */
+  justify-content: left;
+  margin-left: -10px;
+  /* align-items: center; */
+  /* flex-wrap: wrap; Helps on smaller screens */
+}
+
+.footerFaq, .footerMockLinks {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.socialMediaIcons a {
+  display: inline-flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: left;
+  width: 40px;
+  height: 40px;
+}
+
+.socialMediaIcons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer-bottom {

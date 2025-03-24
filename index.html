@@ -161,8 +161,7 @@
           <div class="step-content" id="courierStepContent">
             <h3><strong>For Couriers</strong></h3>
             <p id="courierKeywords">
-              <a href="#">Sign Up as a Courier</a> › Choose Deliveries › Earn
-              Money
+              Sign Up as a Courier › Choose Deliveries › Earn Money
             </p>
             <p class="work-description" id="courierStepDescription">
               Create your courier profile and set your preferences for delivery
@@ -192,7 +191,7 @@
       <div class="faq-list">
         <details>
           <summary>How does In-a-Flash Delivery work?</summary>
-          <p>
+          <p class="answer">
             We match senders with couriers instantly based on preferences and
             pricing.
           </p>
@@ -202,30 +201,34 @@
             Can I choose my delivery price, or does it get assigned
             automatically?
           </summary>
-          <p>
+          <p class="answer">
             You can choose! Couriers offer pricing, and you select the best fit.
           </p>
         </details>
         <details>
           <summary>How do I know my package is safe?</summary>
-          <p>
+          <p class="answer">
             All couriers are verified, tracked in real-time, and reviewed by
             users.
           </p>
         </details>
         <details>
           <summary>What happens if no courier picks up my request?</summary>
-          <p>
+          <p class="answer">
             You can resubmit or adjust your price/time to increase interest.
           </p>
         </details>
         <details>
           <summary>How do I contact my courier?</summary>
-          <p>Through in-app chat or phone once your delivery is accepted.</p>
+          <p class="answer">
+            Through in-app chat or phone once your delivery is accepted.
+          </p>
         </details>
         <details>
           <summary>What payment methods do you accept?</summary>
-          <p>Credit, debit, Apple Pay, Google Pay, and PayPal.</p>
+          <p class="answer">
+            Credit, debit, Apple Pay, Google Pay, and PayPal.
+          </p>
         </details>
       </div>
     </section>
@@ -237,24 +240,53 @@
         <div class="contact-names">
           <div class="name">
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="First Name"
+              required
+            />
           </div>
           <div class="name">
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Last Name"
+              required
+            />
           </div>
         </div>
         <div class="contact-email">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@company.com"
+            required
+          />
         </div>
         <div class="contact-subject">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject" required />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
         </div>
         <div class="contact-message">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
         </div>
 
         <button type="submit">Send</button>
@@ -268,28 +300,58 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="images/logo.png" alt="In-A-Flash" />
-          <p>In–A–Flash</p>
+          <a href="#home">
+            <img src="images/logoLarge.png" alt="In-A-Flash" />
+            <p>In–A–Flash</p>
+          </a>
         </div>
         <div>
           <h4>Company</h4>
           <ul>
-            <li>About Us</li>
-            <li>Licensing</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
+            <li>
+              <!-- About Us -->
+              <a class="footerMockLinks" onclick="openAbout()">About Us</a>
+            </li>
+            <li>
+              <!-- Licensing -->
+              <a class="footerMockLinks" onclick="openLicensing()">Licensing</a>
+            </li>
+            <li>
+              <!-- Terms & Conditions -->
+              <a class="footerMockLinks" onclick="openTerms()">Terms & Conditions</a>
+            </li>
+            <li>
+              <!-- Privacy Policy -->
+              <a class="footerMockLinks" onclick="openPrivacy()">Privacy Policy</a>
+            </li>
           </ul>
         </div>
         <div>
           <h4>Contact</h4>
           <ul>
-            <li>FAQ</li>
-            <li>Support</li>
+            <li><a class="footerFaq" href="#faq">FAQ</a></li>
+            <li>
+            
+              <a class="footerMockLinks"  onclick="openSupport()">Support</a>
+            </li>
           </ul>
         </div>
         <div>
           <h4>Connect with us:</h4>
-          <p>[social icons here]</p>
+          <div class="socialMediaIcons">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="images/facebookIcon.png" alt="Facebook Icon" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="images/instagramIcon.png" alt="Instagram Icon" />
+            </a>
+            <a href="https://x.com/" target="_blank">
+              <img src="images/twitterIcon.png" alt="Twitter Icon" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <img src="images/linkedInIcon.png" alt="LinkedIn Icon" />
+            </a>
+          </div>
         </div>
         <div class="footer-download">
           <h4>Download our App:</h4>

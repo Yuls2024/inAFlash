@@ -181,5 +181,23 @@ const steps = [
     );
   });
   
+  function openSupport() {
+    alert("Support is coming soon!");
+  }
 
-  
+  function openAbout() {
+    alert("About Us content is coming soon!");
+  }
+
+  function openLicensing() {
+    alert("Licensing information is coming soon!");
+  }
+
+  function openTerms() {
+    alert("Terms & Conditions will be available soon!");
+  }
+
+  function openPrivacy() {
+    alert("Privacy Policy will be available soon!");
+  }
+
