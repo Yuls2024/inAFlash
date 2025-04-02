@@ -49,7 +49,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  /* border: 1px solid red; */
 }
 
 .nav-links a {
@@ -71,6 +70,10 @@ header {
   color: #ff6a3d;
   font-weight: 700;
   text-decoration: underline;
+}
+
+.hamburger {
+  display: none; /* hidden by default on desktop */
 }
 
 .download-btn a {
@@ -133,7 +136,7 @@ header {
 .features {
   padding: 60px 120px;
   background-color: #fff;
-  margin-bottom: 120px;
+  /* margin-bottom: 80px;  */
 }
 
 .features-title {
@@ -144,7 +147,8 @@ header {
   text-align: left;
 }
 
-.features-wrapper {
+
+.features-wrapper-decorator {
   background-color: #eaf6fe;
   border-radius: 16px;
   padding: 40px 60px;
@@ -152,8 +156,21 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   max-width: 1200px;
   height: 282px;
-  flex-shrink: 0;
+  position: relative; /* 🔥 Add this line */
+  overflow: visible;  /* 🔥 Allow content to go outside visually */
+  /* margin: 0 auto 40px auto;  */
 }
+
+
+.features-wrapper {
+  border-radius: 16px;
+  padding: 40px 60px;
+  text-align: center;
+  max-width: 1200px;
+  flex-shrink: 0;
+  margin: -140px auto 0 auto; 
+}
+
 
 .features-subtitle {
   font-size: 1.5rem;
@@ -180,19 +197,22 @@ header {
 .feature-card {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
   padding: 24px 42px;
-  flex: 1 1 23%;
+  /* flex: 1 1 23%;
   min-width: 220px;
-  max-width: 300px;
+  max-width: 300px; */
+  width: 250px;
+  flex: 0 0 auto; 
+  /* flex: 1 1 auto; */
   height: 320px;
   background-color: #fff;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  z-index: 1;
 }
 
 /* Feature Number Circle */
@@ -238,7 +258,9 @@ header {
 }
 
 .how-it-works {
-  padding: 80px 120px 0px;
+  /* margin-top: 60px; */
+  /* padding: 80px 120px 0px; */
+  padding: 20px 120px 0px;
   background-color: #fefefe;
 }
 
@@ -285,7 +307,7 @@ header {
   max-width: 700px;
   /* border: 1px solid red; */
   vertical-align: center;
-  margin: 100px 30px; 
+  margin: 100px 30px;
 }
 
 .work-text p {
@@ -429,9 +451,11 @@ header {
 .contact-names {
   display: flex;
   gap: 15px;
-} 
+}
 
-.contact-email, .contact-subject, .contact-message {
+.contact-email,
+.contact-subject,
+.contact-message {
   display: flex;
   flex-direction: column;
 }
@@ -478,7 +502,7 @@ header {
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 40px 60px;
+  padding: 40px 120px;
 }
 
 .footer-content {
@@ -545,7 +569,8 @@ header {
   /* flex-wrap: wrap; Helps on smaller screens */
 }
 
-.footerFaq, .footerMockLinks {
+.footerFaq,
+.footerMockLinks {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
@@ -573,3 +598,192 @@ header {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
+
+
+
+/* @media (max-width: 1020px) {
+
+} */
+
+@media (max-width: 1020px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 0;
+    height: auto;
+    margin: 20px;
+    border-radius: 35px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    right: 20px;
+    height: auto;
+    padding: 150px;
+    margin-top: 100px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background-color: #000;
+    padding-top: 100px;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.show-nav {
+    display: flex;
+
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger img {
+    width: 28px;
+    filter: brightness(10); /* makes black icons appear white */
+  }
+
+
+  .nav-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+
+  .download-btn {
+    display: none;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .store-buttons img {
+    height: 40px;
+    margin: 10px;
+  }
+
+  /* FEATURES SECTION */
+  .features {
+    padding: 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  /* .features-wrapper-decorator {
+    padding: 20px;
+    height: 282px; 
+  }
+
+  .features-wrapper {
+    padding: 20px;
+    height: auto; 
+  } */
+
+  
+
+
+
+  /* HOW IT WORKS */
+  .how-it-works {
+    padding: 40px 20px 0;
+  }
+
+  .work-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .work-text {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* FAQ */
+  .faq {
+    padding: 40px 20px;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .faq-list {
+    margin: 0;
+  }
+
+  /* CONTACT */
+  .contact {
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .contact-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 30px 0 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .store-buttons2 img {
+    width: 140px;
+  }
+}
+
+
+  
+/* <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="fixed-desktop-navbar.css" /> */

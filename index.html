@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fixed-desktop-navbar.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -20,13 +22,31 @@
         </a>
         <!-- <span>In–A–Flash</span> -->
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navMenu">
         <a href="#home">Home</a>
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
+
+      <!-- <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+        <img src="images/hamburgerIcon.png" alt="Menu Icon" width="32" />
+      </button> -->
+
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle navigation"
+      >
+        <img
+          id="menuIcon"
+          src="images/hamburgerIcon.png"
+          alt="Menu Icon"
+          width="32"
+        />
+      </button>
+
       <button class="download-btn">
         <a href="https://apps.apple.com" target="_blank"> Download App </a>
       </button>
@@ -55,56 +75,48 @@
     </section>
 
     <!-- KEY FEATURES -->
+   
+ 
     <section class="features" id="features">
-      <h2 class="features-title">Key Features</h2>
+    <h2 class="features-title">Key Features</h2>
 
-      <div class="features-wrapper">
+    <div class="features-container">
+      <div class="features-wrapper-decorator">
         <h3 class="features-subtitle">What we offer!</h3>
         <p class="features-description">
-          In-A-Flash connects Customers with Couriers customizing the delivery
-          experience.
+          In-A-Flash connects Customers with Couriers customizing the delivery experience.
         </p>
-
+      </div>
+  
+      <div class="features-wrapper">
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-number"><span>1</span></div>
             <h4>Negotiation System</h4>
-            <p>
-              Couriers set their own delivery prices, and customers choose
-              offers that fit their budget.
-            </p>
+            <p>Couriers set their own delivery prices, and customers choose offers that fit their budget.</p>
           </div>
-
+  
           <div class="feature-card">
             <div class="feature-number"><span>2</span></div>
-            <h4>Multi-Stop Delivery</h4>
-            <p>
-              Deliver to multiple stops with custom instructions, real-time
-              tracking, and a single price.
-            </p>
+            <h4>Multi–Stop Delivery</h4>
+            <p>Deliver to multiple stops with custom instructions, real-time tracking, and a single price.</p>
           </div>
-
+  
           <div class="feature-card">
             <div class="feature-number"><span>3</span></div>
             <h4>Choose your courier</h4>
-            <p>
-              Choose the perfect courier with profiles, ratings, modes, and
-              pricing for fast, safe, and efficient delivery.
-            </p>
+            <p>Choose the perfect courier with profiles, ratings, modes, and pricing for fast, safe, and efficient delivery.</p>
           </div>
-
+  
           <div class="feature-card">
             <div class="feature-number"><span>4</span></div>
             <h4>Dynamic delivery scheduling</h4>
-            <p>
-              Schedule deliveries your way—choose instant options or set a
-              future date and time.
-            </p>
+            <p>Schedule deliveries your way—choose instant options or set a future date and time.</p>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+</section>
     <!-- HOW IT WORKS -->
 
     <section class="how-it-works" id="how-it-works">
@@ -318,11 +330,15 @@
             </li>
             <li>
               <!-- Terms & Conditions -->
-              <a class="footerMockLinks" onclick="openTerms()">Terms & Conditions</a>
+              <a class="footerMockLinks" onclick="openTerms()"
+                >Terms & Conditions</a
+              >
             </li>
             <li>
               <!-- Privacy Policy -->
-              <a class="footerMockLinks" onclick="openPrivacy()">Privacy Policy</a>
+              <a class="footerMockLinks" onclick="openPrivacy()"
+                >Privacy Policy</a
+              >
             </li>
           </ul>
         </div>
@@ -331,8 +347,7 @@
           <ul>
             <li><a class="footerFaq" href="#faq">FAQ</a></li>
             <li>
-            
-              <a class="footerMockLinks"  onclick="openSupport()">Support</a>
+              <a class="footerMockLinks" onclick="openSupport()">Support</a>
             </li>
           </ul>
         </div>
