@@ -194,6 +194,7 @@ hamburgerBtn.addEventListener("click", () => {
   menuOpen = !menuOpen;
   navMenu.classList.toggle("show-nav");
   menuIcon.src = menuOpen ? "images/closeMenu.png" : "images/hamburgerIcon.png";
+  document.body.style.overflow = menuOpen ? "hidden" : "auto";
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
