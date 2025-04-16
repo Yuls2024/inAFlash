@@ -7,11 +7,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  /* background-color: #f4fcff; */
   color: #333;
   line-height: 1.6;
-  /* padding: 0 60px;  */
-  min-width: 237px !important ;
+  /* min-width: 237px !important ; */
+
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -41,6 +44,7 @@ header {
 .nav-logo {
   display: flex;
   align-items: center;
+  z-index: 1001;
   gap: 10px;
   font-weight: 600;
   font-size: 1.3rem;
@@ -162,7 +166,7 @@ header {
 
 
 .store-buttons a {
-  width: 600px;      /* or any fixed width */
+  width: 600px;  
   height: 60px;      /* fixed height */
 }
 
@@ -183,7 +187,8 @@ header {
 /* === FEATURES SECTION === */
 
 .features {
-  padding: 60px 120px;
+  /* padding: 60px 120px; */
+  padding: 60px 120px 20px;
   background-color: #fff;
   /* margin-bottom: 80px;  */
 }
@@ -246,15 +251,11 @@ header {
 .feature-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 24px 42px;
-  /* flex: 1 1 23%;
-  min-width: 220px;
-  max-width: 300px; */
   width: 250px;
   flex: 0 0 auto; 
-  /* flex: 1 1 auto; */
   height: 320px;
   background-color: #fff;
   border-radius: 16px;
@@ -266,16 +267,17 @@ header {
 
 /* Feature Number Circle */
 .feature-number {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #000;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #000;
   border-radius: 50%;
-  color: #ff6a3d;
+  color: #ff6a3d;   
+  background-color: #eaf6fe;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 28px;
   margin-bottom: 12px;
 }
 
@@ -299,17 +301,15 @@ header {
 
 .how-it-works h2 {
   color: #ff6a3d;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 2.2rem;
   font-weight: 700;
   text-align: left;
-  /* padding: 0 60px; */
 }
 
 .how-it-works {
-  /* margin-top: 60px; */
-  /* padding: 80px 120px 0px; */
-  padding: 20px 120px 0px;
+  /* padding: 20px 120px 0px; */
+  padding: 0px 120px 0px;
   background-color: #fefefe;
 }
 
@@ -423,6 +423,8 @@ header {
   padding: 0 60px;
 }
 
+
+
 .faq-list {
   /* max-width: 700px; */
   margin: auto 60px;
@@ -436,6 +438,8 @@ header {
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  /* border: 1px solid red; */
+  min-height: auto;
 }
 
 .faq-list summary {
@@ -443,7 +447,9 @@ header {
   cursor: pointer;
   list-style: none; /* Removes default arrow */
   position: relative;
+  min-height: auto;
   padding-right: 25px; /* Space for caret */
+  /* border: 1px solid green; */
 }
 
 .answer {
@@ -679,16 +685,16 @@ header {
     border-radius: 0;
     height: auto;
     margin: 0 20px;
-    border-radius: 35px;
+    /* border-radius: 35px; */
+    border-radius: 50px;
   }
 
-  .nav-links {
+  /* .nav-links {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 0px;
-    left: 20px;
-    right: 20px;
+    top: -10px;
+   
     height: auto;
     padding: 150px 100px;
     margin-top: 100px;
@@ -700,6 +706,61 @@ header {
     gap: 2rem;
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100vw; 
+    overflow-x: hidden;
+
+  } */
+
+  /* .nav-links {
+    position: fixed;
+    top: 40px; 
+    left: 20px;
+    right: 20px;
+    bottom: 5px;
+    width: auto; 
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+    padding: 150px 20px; 
+    margin: 0;
+    border-radius: 50px;
+    background-color: #000;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+  }  */
+
+  .nav-links {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    width: calc(100vw - 40px); 
+    max-width: none;  
+
+    display: none;
+    flex-direction: column;
+    padding: 150px 20px 40px;
+    margin: 0;
+    border-radius: 50px;
+    background-color: #000;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    height: auto;         
+    max-height: 90vh;
   }
 
   .nav-links.show-nav {
@@ -735,26 +796,29 @@ header {
   /* HERO SECTION */
   .hero {
     flex-direction: column;
-    
-    
-    /* padding: 40px 20px; Original padding before blue header background was added */
     padding: 0px 20px;
-    text-align: center;
+    align-items: center;
   }
 
-  .hero-content,
+ .hero-content {
+    width: 100%;
+    max-width: 100%;
+    /* padding: 0 20px;  */
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 30px;
+  }
+
   .hero-image {
     max-width: 100%;
   }
 
   .hero h1 {
     font-size: 2rem;
-    text-align: left;
   }
 
   .hero h2 {
     font-size: 1.2rem;
-    text-align: left;
   }
 
   .store-buttons {
@@ -762,15 +826,17 @@ header {
     padding-bottom: 60px;
   }
 
-  .store-buttons img {
-    height: 40px;
-    /* margin: 10px; */
-  }
 
   .store-buttons.mobile-only img {
-    height: 40px; /* if smaller is needed */
+    height: auto; /* if smaller is needed */
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .store-buttons img {
+    width: 200px;
+    max-width: 45%;   
+    /* height: auto; */
   }
 
   .desktop-only {
@@ -783,16 +849,15 @@ header {
 
   /* FEATURES SECTION */
   .features {
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
+    padding: 40px 20px 0;
     height: auto;
     text-align: center;
   }
 
-
-
   /* HOW IT WORKS */
   .how-it-works {
-    padding: 40px 20px 0;
+    padding: 0px 20px 0;
   }
 
   .work-box {
@@ -812,13 +877,21 @@ header {
   }
 
   .faq h2 {
-    font-size: 1.5rem;
-    text-align: center;
     padding: 0;
   }
 
   .faq-list {
     margin: 0;
+    
+  }
+
+  .faq-list summary {
+    min-height: 52px;
+  }
+
+  .faq-list details[open] {
+    min-height: 144px;
+    
   }
 
   /* CONTACT MOBILE*/
@@ -867,6 +940,22 @@ header {
   .store-buttons2 img {
     width: 140px;
   }
+
+
+  .footer-logo {
+    margin: 0 auto;
+    text-align: center;
+  }  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body[style*="overflow: hidden"] {
+    position: fixed;
+    width: 100%;
+  }
+
 }
 
 
@@ -874,25 +963,45 @@ header {
 
 
   
-@media (max-width: 860px) and (min-width: 601px) {
+@media (max-width: 860px) and (min-width: 451px) {
+  
   .hero {
     flex-direction: column;
     padding: 40px;
-    text-align: center;
-  }
+
+  } 
 
   .hero-content {
     max-width: 100%;
     margin-bottom: 30px;
   }
 
-  .hero h1,
-  .hero h2 {
-    text-align: center;
-  }
+
 
   .hero-image img {
     width: 300px;
     height: auto;
   }
+
+
 }
+
+@media (max-width: 450px) {
+  .hero-image img {
+    width: 250px;
+    height: auto;
+  }
+
+  .store-buttons.mobile-only {
+    text-align: center;
+  }
+
+  .store-buttons a {
+    max-width: 45%;
+    margin: 0 auto;
+  }
+
+}
+
+
+
