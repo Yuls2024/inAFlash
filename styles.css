@@ -445,6 +445,11 @@ header {
   /* border: 1px solid green; */
 }
 
+/* Getting rid of carets on the right added by web browser */
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
 .answer {
   padding-top: 10px;
 }
