@@ -31,7 +31,6 @@ header {
   display: flex;
   height: 126px;
   justify-content: space-between;
-
   align-items: center;
   padding: 20px 60px;
   margin: 50px 120px; /* Original without soft blue background */
@@ -133,12 +132,6 @@ header {
   margin-bottom: 30px;
 }
 
-
-/* .store-buttons {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0;
-} */
 
 .store-buttons {
   display: flex;   /* <-- change inline-flex to flex */
@@ -674,10 +667,12 @@ header {
 }
 
 
+
+
 @media (max-width: 1020px) {
   /* NAVBAR */
+
   .navbar {
-    
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -685,27 +680,32 @@ header {
     border-radius: 0;
     height: auto;
     margin: 0 20px;
-    /* border-radius: 35px; */
-    border-radius: 50px;
+    /* border-radius: 50px; */
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px; */
+    border-radius: 35px;
   }
 
 
 
   .nav-links {
     position: fixed;
-    top: 40px;
+    top: 120px;
     left: 20px;
     right: 20px;
     bottom: 20px;
-
     width: calc(100vw - 40px); 
     max-width: none;  
 
     display: none;
     flex-direction: column;
-    padding: 150px 20px 40px;
+    padding: 0px 20px 40px;
     margin: 0;
-    border-radius: 50px;
+    /* border-radius: 50px; */
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
     background-color: #000;
     align-items: center;
     gap: 2rem;
@@ -717,6 +717,8 @@ header {
 
     height: auto;         
     max-height: 90vh;
+
+    z-index: 1000;
   }
 
   .nav-links.show-nav {
@@ -930,8 +932,6 @@ header {
     margin-bottom: 30px;
   }
 
-
-
   .hero-image img {
     width: 300px;
     height: auto;
@@ -951,6 +951,3 @@ header {
   }
 
 }
-
-
-
